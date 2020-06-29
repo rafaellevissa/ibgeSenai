@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
+import {View, Text, Image,KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native';
 import Styles from './styles';
 import Logo from '../assets/logo.png';
 
@@ -9,7 +9,7 @@ export default function Home({navigation}){
     const [name,setName] = useState('');
     const [year,setYear] = useState('');
     return(
-        <View style={Styles.container}>
+        <KeyboardAvoidingView style={Style.container}>
             <View style={Styles.header}>
                 <Image source={Logo} />
             </View>
@@ -19,6 +19,6 @@ export default function Home({navigation}){
                 <TextInput keyboardType='numeric' placeholder='Ano de nascimento' onChangeText={(year) => {setYear(year);}} placeholderTextColor='#000' style={Styles.input} />
                 <TouchableOpacity style={Styles.button} onPress={() => {IbgeController(name, year, navigation);}} ><Text style={Styles.buttonText}>Enviar</Text></TouchableOpacity>
             </View>
-        </View>
+        </KeyboardAvoidingView>
     );
 }

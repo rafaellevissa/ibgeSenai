@@ -19,6 +19,10 @@ Foto | Nome | GitHub | Likedin | E-mail
 - JS
 - React Native
 
+**Arquitetura**
+
+![arquitetura](./doc/arquitetura.png)
+
 **Comandos**
 
 - Instalar o Expo-cli:

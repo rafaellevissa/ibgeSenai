@@ -22,7 +22,7 @@ export default async function IbgeController(name, year, navigation){
 
     var description = 'A década que mais nasceu '+getName+' foi: '+period;
     
-    if(timePeriodOne <= year && timePeriodTwo >= year){
+    if(year >= timePeriodOne && timePeriodTwo <= year){
         description ='Sua década foi a que mais nasceu '+getName; 
     }
 

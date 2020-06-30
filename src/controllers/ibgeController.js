@@ -5,7 +5,7 @@ export default async function IbgeController(name, year, navigation){
     const response = await api.get('/nomes/' + name);
     const getName = response.data[0].nome;
 
-    const maximumSize = response.data[0].res.length;
+    const maximumSize = response.data[0].res.length;    
     let maximumValue = response.data[0].res[0].frequencia;
 
     for(let i =0; i< maximumSize;i++){
@@ -20,10 +20,10 @@ export default async function IbgeController(name, year, navigation){
     const timePeriodTwo = decade.replace(/(\D)/g, ',').split(',')[2];
     const period = timePeriodOne + ' ' + timePeriodTwo;
 
-    const description = 'A década que mais nasceu '+getName+' foi: '+period;
-
-    if(year>=timePeriodOne && year<=timePeriodTwo){
-        const description ='Sua década foi a que mais nasceu '+getName; 
+    var description = 'A década que mais nasceu '+getName+' foi: '+period;
+    
+    if(timePeriodOne <= year && timePeriodTwo >= year){
+        description ='Sua década foi a que mais nasceu '+getName; 
     }
 
     await AsyncStorage.setItem('description', description);

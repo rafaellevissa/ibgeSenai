@@ -7,7 +7,7 @@ import IbgeController from '../controllers/ibgeController';
 
 export default function Home({navigation}){
     const [name,setName] = useState('');
-    const [year,setYear] = useState('');
+    const [year,setYear] = useState(0);
     return(
         <KeyboardAvoidingView style={Styles.container}>
             <View style={Styles.header}>

@@ -9,7 +9,7 @@ export default function Home({navigation}){
     const [name,setName] = useState('');
     const [year,setYear] = useState('');
     return(
-        <KeyboardAvoidingView style={Style.container}>
+        <KeyboardAvoidingView style={Styles.container}>
             <View style={Styles.header}>
                 <Image source={Logo} />
             </View>

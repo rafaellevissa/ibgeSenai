@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, AsyncStorage} from 'react-native';
+import {View, Text, AsyncStorage, Image} from 'react-native';
 import Styles from './styles';
 import Logo from '../assets/logo.png';
 
